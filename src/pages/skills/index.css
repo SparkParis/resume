@@ -1,0 +1,40 @@
+.skills {
+  background-image: linear-gradient(-225deg, #77FFD2 0%, #6297DB 48%, #1EECFF 100%);
+  display: flex;
+  flex-direction: column;
+}
+.skills span {
+  color: #da7400;
+}
+.skills .pagebody {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.skills .pagebody .radar {
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.skills .pagebody .skillsContent {
+  margin: 0 40px;
+  flex: 1;
+  background: #FFF;
+  border-radius: 4px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.skills .pagebody .skillsContent ul {
+  margin: 20px;
+}
+.skills .pagebody .skillsContent li {
+  font-size: 18px;
+  margin: 5px;
+}
+/* adapt mobile browser */
+@media (max-width: 430px) {
+  .skills .pagebody .skillsContent {
+    width: 100%;
+  }
+}

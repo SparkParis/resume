@@ -1,0 +1,161 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(-225deg, #2CD8D5 0%, #6B8DD6 48%, #8E37D7 100%);
+}
+.projects .pagebody {
+  position: relative;
+}
+.projects .pagebody .section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100%) translateZ(0);
+  transition: all 1s ease;
+}
+.projects .pagebody .section .desc {
+  width: 500px;
+}
+.projects .pagebody .section .desc .descTitle,
+.projects .pagebody .section .desc .subTitle,
+.projects .pagebody .section .desc .description,
+.projects .pagebody .section .desc .link {
+  color: #FFF;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+.projects .pagebody .section .desc .descTitle {
+  font-size: 35px;
+  line-height: 60px;
+}
+.projects .pagebody .section .desc .subTitle {
+  font-size: 23px;
+  line-height: 50px;
+  font-weight: normal;
+}
+.projects .pagebody .section .desc .description {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+  word-break: break-all;
+}
+.projects .pagebody .section .desc .link {
+  margin-top: 20px;
+  padding: 10px 0;
+  width: 300px;
+  font-size: 18px;
+  text-decoration: none;
+  border: 1px solid #FFF;
+  border-radius: 6px;
+  transition: all 300ms ease;
+}
+.projects .pagebody .section .desc .link svg {
+  fill: #FFF;
+}
+.projects .pagebody .section .desc .link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.projects .pagebody .section .mockup {
+  min-height: 400px;
+  max-height: 500px;
+  user-select: none;
+}
+.projects .pagebody .currentSection {
+  opacity: 1;
+  transform: translateX(0) translateZ(0);
+}
+.projects .pagebody .preSection {
+  transform: translateX(-100%) translateZ(0);
+}
+.projects .pagebody .prePageBtn,
+.projects .pagebody .nextPageBtn {
+  position: absolute;
+  bottom: 0;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 300ms ease;
+}
+.projects .pagebody .prePageBtn svg,
+.projects .pagebody .nextPageBtn svg {
+  fill: #FFF;
+}
+.projects .pagebody .prePageBtn:hover,
+.projects .pagebody .nextPageBtn:hover {
+  opacity: 1;
+}
+.projects .pagebody .prePageBtn {
+  left: 0;
+}
+.projects .pagebody .nextPageBtn {
+  right: 0;
+}
+.black-font .title {
+  color: #fff;
+  text-shadow: none;
+}
+.black-font .pagebody .section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.black-font .pagebody .section .desc .descTitle,
+.black-font .pagebody .section .desc .subTitle,
+.black-font .pagebody .section .desc .description,
+.black-font .pagebody .section .desc .link {
+  color: #444;
+  text-shadow: none;
+}
+.black-font .pagebody .section .desc .link {
+  border: 1px solid #444;
+}
+.black-font .pagebody .section .desc .link svg {
+  fill: #444;
+}
+.black-font .pagebody .section .desc .link:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.black-font .pagebody .prePageBtn,
+.black-font .pagebody .nextPageBtn {
+  opacity: 0.6;
+}
+.black-font .pagebody .prePageBtn svg,
+.black-font .pagebody .nextPageBtn svg {
+  fill: #444;
+}
+.black-font .pagebody .prePageBtn:hover,
+.black-font .pagebody .nextPageBtn:hover {
+  opacity: 1;
+}
+/* adapt mobile browser */
+@media (max-width: 430px) {
+  .projects .pagebody .section {
+    flex-direction: column-reverse !important;
+    justify-content: flex-end;
+  }
+  .projects .pagebody .section .desc {
+    width: 100%;
+  }
+  .projects .pagebody .section .desc .descTitle {
+    font-size: 28px;
+    line-height: 50px;
+  }
+  .projects .pagebody .section .desc .subTitle {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .projects .pagebody .section .desc .description {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .projects .pagebody .section .link {
+    margin: 20px auto;
+  }
+  .projects .pagebody .section .mockup {
+    min-height: 100px;
+    max-height: 100px;
+    user-select: none;
+  }
+}

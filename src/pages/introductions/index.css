@@ -1,0 +1,177 @@
+/**
+ * mix in
+ */
+/**
+ * slide up in
+ * for next route
+ */
+.slideUpIn-enter-active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(0) translateZ(0);
+  opacity: 1;
+}
+.slideUpIn-leave-active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  animation: slide-out 800ms ease;
+}
+.slideDownIn-enter-active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  animation: slideDownIn-in 800ms ease;
+}
+.slideDownIn-leave-active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  animation: slide-out 800ms ease;
+}
+/**
+ * animation
+ */
+.fade-enter-active,
+.fade-leave-active {
+  opacity: 0;
+  animation: fade 800ms ease 300ms normal forwards;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+@keyframes slideUpIn-in {
+  0% {
+    transform: translateY(100%) translateZ(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slideDownIn-in {
+  0% {
+    transform: translateY(-100%) translateZ(0);
+  }
+  100% {
+    transform: translateY(0) translateZ(0);
+  }
+}
+@keyframes slide-out {
+  0% {
+    transform: scale(1) translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9) translateZ(0);
+    opacity: 0.9;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.icon {
+  width: 32px;
+  height: 32px;
+}
+.introductions {
+  background-image: linear-gradient(-145deg, #2CD8D5 0%, #6B8DD6 48%, #8E37D7 100%);
+  display: flex;
+  flex-direction: column;
+}
+.introductions .title {
+  font-family: cursive;
+}
+.introductions .pagebody {
+  justify-content: flex-start;
+}
+.introductions .pagebody .selfIntroduction,
+.introductions .pagebody .selfInformations {
+  margin-top: 40px;
+  padding: 20px;
+  width: 80%;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.introductions .pagebody .selfIntroduction span,
+.introductions .pagebody .selfInformations span {
+  line-height: 30px;
+  margin: 5px 20px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.introductions .pagebody .selfIntroduction .left,
+.introductions .pagebody .selfInformations .left {
+  text-align: left;
+  margin: 0 100px;
+}
+.introductions .pagebody .selfIntroduction p,
+.introductions .pagebody .selfInformations p {
+  font-size: 16px;
+  color: #444;
+  line-height: 2;
+}
+.introductions .pagebody .selfIntroduction .infoRow,
+.introductions .pagebody .selfInformations .infoRow {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.introductions .pagebody .selfIntroduction .infoRow .infoItem,
+.introductions .pagebody .selfInformations .infoRow .infoItem {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+}
+.introductions .pagebody .selfIntroduction .infoCol,
+.introductions .pagebody .selfInformations .infoCol {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  flex-direction: column;
+  display: none;
+}
+.introductions .pagebody .selfIntroduction .infoCol .infoItem,
+.introductions .pagebody .selfInformations .infoCol .infoItem {
+  width: auto;
+  margin-top: 10px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.introductions .pagebody .selfIntroduction .infoCol .infoItem p,
+.introductions .pagebody .selfInformations .infoCol .infoItem p {
+  margin-left: 5px;
+}
+/* adapt mobile browser */
+@media (max-width: 430px) {
+  .introductions .pagebody {
+    justify-content: center;
+  }
+  .introductions .pagebody .selfIntroduction,
+  .introductions .pagebody .selfInformations {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+  .introductions .pagebody .selfIntroduction .infoRow,
+  .introductions .pagebody .selfInformations .infoRow {
+    display: none;
+  }
+  .introductions .pagebody .selfIntroduction .infoCol,
+  .introductions .pagebody .selfInformations .infoCol {
+    display: block;
+  }
+  .introductions .pagebody .selfIntroduction {
+    margin-top: 0;
+  }
+}

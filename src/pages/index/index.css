@@ -1,0 +1,390 @@
+/**
+ * mix in
+ */
+/**
+ * slide up in
+ * for next route
+ */
+.slideUpIn-enter-active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(0) translateZ(0);
+  opacity: 1;
+}
+.slideUpIn-leave-active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  animation: slide-out 800ms ease;
+}
+.slideDownIn-enter-active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  animation: slideDownIn-in 800ms ease;
+}
+.slideDownIn-leave-active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  animation: slide-out 800ms ease;
+}
+/**
+ * animation
+ */
+.fade-enter-active,
+.fade-leave-active {
+  opacity: 0;
+  animation: fade 800ms ease 300ms normal forwards;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+@keyframes slideUpIn-in {
+  0% {
+    transform: translateY(100%) translateZ(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slideDownIn-in {
+  0% {
+    transform: translateY(-100%) translateZ(0);
+  }
+  100% {
+    transform: translateY(0) translateZ(0);
+  }
+}
+@keyframes slide-out {
+  0% {
+    transform: scale(1) translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9) translateZ(0);
+    opacity: 0.9;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.index {
+  background-image: linear-gradient(to top, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.index .avatar {
+  width: 200px;
+  height: 200px;
+  margin-top: -60px;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index .avatar img {
+  width: 100%;
+  user-select: none;
+}
+.index .name {
+  margin-top: 40px;
+  color: #ffffff;
+  font-size: 50px;
+  line-height: 60px;
+  font-family: cursive;
+  display: block;
+}
+.index .shortDescription {
+  color: #e9c2f5;
+  line-height: 60px;
+  font-size: 20px;
+}
+.index .social {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index .social .blog {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+}
+.index .social .blog .circle {
+  fill: transparent;
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.5);
+  stroke-dasharray: 0 200;
+  stroke-dashoffset: -200;
+  transition: all 300ms;
+}
+.index .social .blog:hover .circle {
+  -webkit-animation: blog 500ms ease forwards;
+  animation: blog 500ms ease forwards;
+}
+@keyframes blog {
+  0% {
+    stroke-dasharray: 0 200;
+    stroke-dashoffset: -200;
+  }
+  100% {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 0;
+    stroke-width: 1px;
+    stroke: #6ca397;
+  }
+}
+.index .social .blog .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index .social .blog .icon svg {
+  fill: rgba(0, 0, 0, 0.5);
+  transition: all 500ms;
+}
+.index .social .blog .icon:hover svg {
+  fill: #6ca397;
+}
+.index .social .github {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  margin: 10px;
+}
+.index .social .github .circle {
+  fill: transparent;
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.5);
+  stroke-dasharray: 0 200;
+  stroke-dashoffset: -200;
+  transition: all 300ms;
+}
+.index .social .github:hover .circle {
+  -webkit-animation: github 500ms ease forwards;
+  animation: github 500ms ease forwards;
+}
+@keyframes github {
+  0% {
+    stroke-dasharray: 0 200;
+    stroke-dashoffset: -200;
+  }
+  100% {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 0;
+    stroke-width: 1px;
+    stroke: #444444;
+  }
+}
+.index .social .github .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index .social .github .icon svg {
+  fill: rgba(0, 0, 0, 0.5);
+  transition: all 500ms;
+}
+.index .social .github .icon:hover svg {
+  fill: #444444;
+}
+.index .social .ui {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+}
+.index .social .ui .circle {
+  fill: transparent;
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.5);
+  stroke-dasharray: 0 200;
+  stroke-dashoffset: -200;
+  transition: all 300ms;
+}
+.index .social .ui:hover .circle {
+  -webkit-animation: ui 500ms ease forwards;
+  animation: ui 500ms ease forwards;
+}
+@keyframes ui {
+  0% {
+    stroke-dasharray: 0 200;
+    stroke-dashoffset: -200;
+  }
+  100% {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 0;
+    stroke-width: 1px;
+    stroke: #3498db;
+  }
+}
+.index .social .ui .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index .social .ui .icon svg {
+  fill: rgba(0, 0, 0, 0.5);
+  transition: all 500ms;
+}
+.index .social .ui .icon:hover svg {
+  fill: #3498db;
+}
+.index .social .zhihu {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+}
+.index .social .zhihu .circle {
+  fill: transparent;
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.5);
+  stroke-dasharray: 0 200;
+  stroke-dashoffset: -200;
+  transition: all 300ms;
+}
+.index .social .zhihu:hover .circle {
+  -webkit-animation: zhihu 500ms ease forwards;
+  animation: zhihu 500ms ease forwards;
+}
+@keyframes zhihu {
+  0% {
+    stroke-dasharray: 0 200;
+    stroke-dashoffset: -200;
+  }
+  100% {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 0;
+    stroke-width: 1px;
+    stroke: #0f88eb;
+  }
+}
+.index .social .zhihu .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index .social .zhihu .icon svg {
+  fill: rgba(0, 0, 0, 0.5);
+  transition: all 500ms;
+}
+.index .social .zhihu .icon:hover svg {
+  fill: #0f88eb;
+}
+.index .social .weibo {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+.index .social .weibo .circle {
+  fill: transparent;
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.5);
+  stroke-dasharray: 0 200;
+  stroke-dashoffset: -200;
+  transition: all 300ms;
+}
+.index .social .weibo:hover .circle {
+  -webkit-animation: weibo 500ms ease forwards;
+  animation: weibo 500ms ease forwards;
+}
+@keyframes weibo {
+  0% {
+    stroke-dasharray: 0 200;
+    stroke-dashoffset: -200;
+  }
+  100% {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 0;
+    stroke-width: 1px;
+    stroke: #fa7d3c;
+  }
+}
+.index .social .weibo .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index .social .weibo .icon svg {
+  fill: rgba(0, 0, 0, 0.5);
+  transition: all 500ms;
+}
+.index .social .weibo .icon:hover svg {
+  fill: #fa7d3c;
+}
+.index .footer {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+}
+.index .footer span {
+  animation: float 1s infinite ease alternate-reverse;
+}
+.index .footer a {
+  color: #999;
+  font-size: 14px;
+  line-height: 40px;
+  text-decoration: none;
+}
+/* social icons */
+/* social icon end*/
+/* animation */
+@keyframes float {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
