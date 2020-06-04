@@ -84,8 +84,9 @@
       </div>
       <div class="footer">
         <out-link
-          href="https://github.com/zycfj/resume"
+          href="https://github.com/SparkParis/resume"
           target="_blank"
+          style="color: #fff;"
         >Star or fork this page at Github</out-link>
         <span>↓</span>
       </div>
