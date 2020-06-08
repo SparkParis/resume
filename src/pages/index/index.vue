@@ -63,7 +63,7 @@
         <svg viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <circle class="circle" cy="35" cx="35" r="30" />
         </svg>
-        <out-link href="https://sparkparis.github.io/resume" target="_blank" class="icon">
+        <out-link href="http://sparkparis.cn/assets/resumepdf/" target="_blank" class="icon">
           <svg
             t="1591180647788"
             class="icon"

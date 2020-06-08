@@ -2,7 +2,7 @@
 
 > My resume is powered by vue.js
 
-Website: [http://182.92.102.182/resume/](http://182.92.102.182/resume/)
+Website: [http://sparkparis.cn/](http://sparkparis.cn/)
 
 ## Build Setup
 
